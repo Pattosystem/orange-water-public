@@ -1,415 +1,65 @@
-
 <!doctype html>
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>オレンジ水道サービス｜水まわりのご相談</title>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" async defer></script>
 <style>
-:root{
-  font-family:system-ui,"Noto Sans JP",sans-serif;
-  color:#18394d;
-  background:#eef9ff;
-}
-*{box-sizing:border-box}
-body{margin:0}
-header{
-  background:white;
-  border-bottom:4px solid #ff922b;
-  padding:18px;
-  text-align:center;
-  color:#ed7a13;
-  font-size:24px;
-  font-weight:800;
-}
-main{max-width:760px;margin:auto;padding:26px 16px 80px}
-h1{text-align:center;font-size:29px;line-height:1.5}
-.lead{text-align:center;line-height:1.8}
-.card{
-  background:white;
-  border-radius:20px;
-  padding:22px;
-  margin:20px 0;
-  box-shadow:0 5px 20px #b9d7e744;
-}
-h2{font-size:21px;margin:0 0 18px}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-button{font:inherit;cursor:pointer}
-.choice{
-  background:#e8f6ff;
-  border:2px solid #bee5fc;
-  border-radius:15px;
-  padding:22px 10px;
-  min-height:115px;
-  font-size:18px;
-  font-weight:750;
-  color:#17394d;
-}
-.choice .emoji{display:block;font-size:38px;margin-bottom:8px}
-.choice:hover,.choice.selected{
-  border-color:#ff922b;
-  background:#fff3e6;
-}
-.primary{
-  display:block;
-  width:100%;
-  background:#fa8b22;
-  color:#17394d;
-  border:0;
-  border-radius:14px;
-  padding:19px;
-  font-size:19px;
-  font-weight:800;
-  margin-top:18px;
-}
-.secondary{
-  width:100%;
-  background:white;
-  border:2px solid #a9cce0;
-  border-radius:14px;
-  padding:15px;
-  font-size:17px;
-  font-weight:700;
-  color:#17394d;
-  margin-top:10px;
-}
-input,textarea,select{
-  width:100%;
-  font:inherit;
-  font-size:17px;
-  border:2px solid #b9d6e7;
-  border-radius:12px;
-  padding:14px;
-  background:white;
-}
-textarea{min-height:110px}
-label{display:block;font-weight:700;margin:15px 0 8px}
-.note{font-size:14px;color:#55758a;line-height:1.8}
-.warning{
-  background:#fff1df;
-  border-left:5px solid #f08b20;
-  padding:15px;
-  border-radius:10px;
-  line-height:1.8;
-}
-.photoButtons{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.photoButton{
-  display:block;
-  background:#e6f5ff;
-  border:2px solid #b8dff6;
-  border-radius:14px;
-  padding:20px 10px;
-  text-align:center;
-  font-weight:800;
-  cursor:pointer;
-}
-.photoButton span{display:block;font-size:32px;margin-bottom:8px}
-#preview{max-width:100%;max-height:340px;border-radius:12px;margin-top:15px}
-.hidden{display:none!important}
-.progress{color:#53778c;font-size:14px;text-align:center}
-.summaryLine{
-  border-bottom:1px solid #d7e8f1;
-  padding:13px 0;
-  line-height:1.7;
-}
-.summaryLine strong{display:block}
-footer{text-align:center;color:#668497;font-size:13px;padding:25px}
-@media(max-width:480px){
- h1{font-size:24px}
- .choice{font-size:16px;padding:16px 6px}
- .card{padding:17px}
- .photoButtons{grid-template-columns:1fr}
-}
+:root{font-family:system-ui,"Noto Sans JP",sans-serif;color:#18394d;background:#eef9ff}
+*{box-sizing:border-box}body{margin:0}header{background:white;border-bottom:4px solid #ff922b;padding:18px;text-align:center;color:#ed7a13;font-size:24px;font-weight:800}main{max-width:760px;margin:auto;padding:26px 16px 80px}h1{text-align:center;font-size:29px;line-height:1.5}.lead{text-align:center;line-height:1.8}.card{background:white;border-radius:20px;padding:22px;margin:20px 0;box-shadow:0 5px 20px #b9d7e744}h2{font-size:21px;margin:0 0 18px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}button{font:inherit;cursor:pointer}.choice{background:#e8f6ff;border:2px solid #bee5fc;border-radius:15px;padding:22px 10px;min-height:115px;font-size:18px;font-weight:750;color:#17394d}.choice .emoji{display:block;font-size:38px;margin-bottom:8px}.choice:hover,.choice.selected{border-color:#ff922b;background:#fff3e6}.primary{display:block;width:100%;background:#fa8b22;color:#17394d;border:0;border-radius:14px;padding:19px;font-size:19px;font-weight:800;margin-top:18px}.primary:disabled{background:#c4d2d8;color:#536975;cursor:not-allowed}.secondary{width:100%;background:white;border:2px solid #a9cce0;border-radius:14px;padding:15px;font-size:17px;font-weight:700;color:#17394d;margin-top:10px}input,textarea,select{width:100%;font:inherit;font-size:17px;border:2px solid #b9d6e7;border-radius:12px;padding:14px;background:white}textarea{min-height:110px}label{display:block;font-weight:700;margin:15px 0 8px}.note{font-size:14px;color:#55758a;line-height:1.8}.warning{background:#fff1df;border-left:5px solid #f08b20;padding:15px;border-radius:10px;line-height:1.8}.photoButtons{display:grid;grid-template-columns:1fr 1fr;gap:12px}.photoButton{display:block;background:#e6f5ff;border:2px solid #b8dff6;border-radius:14px;padding:20px 10px;text-align:center;font-weight:800;cursor:pointer}.photoButton span{display:block;font-size:32px;margin-bottom:8px}#preview{max-width:100%;max-height:340px;border-radius:12px;margin-top:15px}.hidden{display:none!important}.progress{color:#53778c;font-size:14px;text-align:center}.summaryLine{border-bottom:1px solid #d7e8f1;padding:13px 0;line-height:1.7}.summaryLine strong{display:block}.status{margin-top:14px;line-height:1.8}.error{color:#a12a1e;font-weight:700}.success{background:#e9f8ee;border-left:5px solid #23985c;padding:16px;border-radius:10px;line-height:1.8}.verify{margin-top:20px;min-height:70px}footer{text-align:center;color:#668497;font-size:13px;padding:25px}@media(max-width:480px){h1{font-size:24px}.choice{font-size:16px;padding:16px 6px}.card{padding:17px}.photoButtons{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 <header>💧 オレンジ水道サービス</header>
 <main>
 <h1>水まわりのお困りごと、<br>一緒に解決しましょう。</h1>
-<p class="lead">
-難しい説明は必要ありません。<br>
-画面の案内に沿ってお選びください。
-</p>
-
+<p class="lead">難しい説明は必要ありません。<br>画面の案内に沿ってお選びください。</p>
 <div id="app"></div>
-
-<div class="warning">
-<strong>水が大量に漏れている場合</strong><br>
-安全を確保し、可能であれば止水栓を閉めてください。
-電気設備が濡れている場合は触れないでください。
-</div>
-
-<footer>
-オレンジ水道サービス<br>
-大阪府堺市西区・高石市周辺
-</footer>
+<div class="warning"><strong>水が大量に漏れている場合</strong><br>安全を確保し、可能であれば止水栓を閉めてください。電気設備が濡れている場合は触れないでください。緊急時はこのフォームの入力を待たずに専門業者へ連絡してください。</div>
+<footer>オレンジ水道サービス<br>大阪府堺市西区・高石市周辺</footer>
 </main>
-
-<input id="cameraInput" type="file" accept="image/*"
- capture="environment" class="hidden">
-<input id="fileInput" type="file" accept="image/*"
- class="hidden">
-
+<input id="cameraInput" type="file" accept="image/*" capture="environment" class="hidden">
+<input id="fileInput" type="file" accept="image/*" class="hidden">
 <script>
-const state={
- step:0,
- issue:"",
- place:"",
- water:"",
- age:"",
- preference:"",
- features:[],
- photo:null,
- photoUrl:null,
- details:"",
- visit:"",
- name:"",
- phone:""
-};
-
-const app=document.getElementById("app");
-const escapeHTML=s=>String(s??"").replace(/[&<>"']/g,c=>({
- "&":"&amp;","<":"&lt;",">":"&gt;",
- '"':"&quot;","'":"&#39;"
-}[c]));
-
-function card(title,content){
- return `<section class="card"><h2>${title}</h2>${content}</section>`;
-}
-
-function options(items,field,next){
- return `<div class="grid">${items.map(item=>
- `<button class="choice" data-value="${escapeHTML(item[0])}"
- data-field="${field}" data-next="${next}">
- <span class="emoji">${item[1]}</span>
- ${escapeHTML(item[0])}</button>`
- ).join("")}</div>`;
-}
-
+'use strict';
+const SITE_KEY='0x4AAAAAAF_VjWJLENvdEDxH';
+const ENDPOINT='https://lecwkspernwahstsefqy.supabase.co/functions/v1/concierge-submit';
+const state={step:0,issue:'',place:'',water:'',age:'',preference:'',features:[],photo:null,photoUrl:null,details:'',visit:'まだ決めていない',sent:false,caseId:''};
+const app=document.getElementById('app');
+let widgetId=null,token='',submitting=false;
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const card=(title,content)=>`<section class="card"><h2>${title}</h2>${content}</section>`;
+const options=(items,field,next)=>`<div class="grid">${items.map(([name,emoji])=>`<button type="button" class="choice" data-value="${esc(name)}" data-field="${field}" data-next="${next}"><span class="emoji">${emoji}</span>${esc(name)}</button>`).join('')}</div>`;
+function resetWidget(){token='';if(widgetId!==null&&window.turnstile){try{window.turnstile.remove(widgetId)}catch{}widgetId=null}}
+function initTurnstile(){if(state.step!==7||state.sent)return;const target=document.getElementById('turnstile-box');if(!target)return;if(!window.turnstile){setTimeout(initTurnstile,250);return}if(widgetId!==null)return;widgetId=window.turnstile.render(target,{sitekey:SITE_KEY,theme:'light',callback:value=>{token=value;updateSubmit()},'expired-callback':()=>{token='';updateSubmit()},'error-callback':()=>{token='';updateSubmit()}})}
+function updateSubmit(){const b=document.getElementById('send');if(b)b.disabled=!token||submitting}
 function render(){
+ if(state.step!==7)resetWidget();
  let html=`<p class="progress">ご相談のステップ ${Math.min(state.step+1,7)} / 7</p>`;
-
- if(state.step===0){
-  html+=card("どのようなご相談ですか？",
-   options([
-    ["水が漏れる","💦"],
-    ["水が流れない","🚽"],
-    ["蛇口を交換したい","🚰"],
-    ["その他の水まわり","🛁"]
-   ],"issue",1));
- }
-
- if(state.step===1){
-  html+=card("どこの水まわりですか？",
-   options([
-    ["キッチン","🍳"],
-    ["洗面台","🪥"],
-    ["トイレ","🚽"],
-    ["浴室","🛁"],
-    ["屋外・配管","🏠"],
-    ["分からない","❓"]
-   ],"place",2));
- }
-
- if(state.step===2){
-  html+=card("今、水はどのような状態ですか？",
-   options([
-    ["大量に漏れている","⚠️"],
-    ["少し漏れている","💧"],
-    ["水が出ない・流れない","🚱"],
-    ["水漏れはない","✅"],
-    ["よく分からない","❓"]
-   ],"water",3));
-
-  if(state.water==="大量に漏れている"){
-   html+=`<div class="warning">
-   <strong>緊急の可能性があります。</strong><br>
-   安全な範囲で止水してください。
-   緊急対応が必要な場合は、写真撮影を待たずに
-   電話等で専門業者へ連絡してください。
-   </div>`;
-  }
- }
-
- if(state.step===3){
-  html+=card("設備は何年くらい使っていますか？",
-   options([
-    ["5年未満","✨"],
-    ["5〜10年","🕒"],
-    ["10年以上","📅"],
-    ["分からない","❓"]
-   ],"age",4));
- }
-
- if(state.step===4){
-  html+=card("写真を見せていただけますか？",`
-   <p>蛇口や水漏れしている場所の写真があると、
-   状況を確認しやすくなります。</p>
-   <div class="photoButtons">
-    <label class="photoButton" for="cameraInput">
-     <span>📷</span>写真を撮る
-    </label>
-    <label class="photoButton" for="fileInput">
-     <span>🖼️</span>写真を選ぶ
-    </label>
-   </div>
-   ${state.photoUrl?`
-    <img id="preview" src="${state.photoUrl}" alt="選択した写真">
-    <p class="note">写真を選択しました。</p>
-   `:""}
-   <p class="note">
-    ※現在は動作確認版です。写真は外部に送信されず、
-    AIによる自動判定もまだ行いません。
-   </p>
-   <button class="primary" data-go="5">
-    ${state.photo?"この写真で次へ":"写真なしで次へ"}
-   </button>
-  `);
- }
-
- if(state.step===5){
-  html+=card("どのような解決方法をご希望ですか？",
-   options([
-    ["まず修理したい","🔧"],
-    ["新しいものに交換したい","🚰"],
-    ["修理と交換を比較したい","⚖️"],
-    ["相談して決めたい","💬"]
-   ],"preference",6));
- }
-
- if(state.step===6){
-  let replacement=state.preference.includes("交換")||
-   state.preference.includes("比較")||
-   state.preference.includes("相談");
-
-  html+=card("ご希望をもう少し教えてください",`
-   ${replacement?`
-   <p>新しい蛇口をご検討の場合、次のような機能もあります。</p>
-   <div class="grid">
-    ${[
-      ["タッチレス","👋"],
-      ["浄水機能","💧"],
-      ["ホースが伸びる","🚿"],
-      ["節水タイプ","🌱"]
-    ].map(([v,e])=>`
-     <button class="choice feature" data-feature="${v}">
-      <span class="emoji">${e}</span>${v}
-     </button>`).join("")}
-   </div>
-   <p class="note">気になる機能があれば選択できます。
-   複数選択も可能です。</p>`:""}
-   <label for="details">その他、気になること（任意）</label>
-   <textarea id="details" placeholder="例：蛇口の根元から水が漏れます">${escapeHTML(state.details)}</textarea>
-   <label for="visit">訪問希望</label>
-   <select id="visit">
-    ${["まだ決めていない","できるだけ早く","1週間以内","日程は相談したい"]
-     .map(v=>`<option ${state.visit===v?"selected":""}>${v}</option>`).join("")}
-   </select>
-   <button class="primary" id="confirm">相談内容を確認する</button>
-  `);
- }
-
- if(state.step===7){
-  const rows=[
-   ["ご相談",state.issue],
-   ["場所",state.place],
-   ["水の状態",state.water],
-   ["使用年数",state.age],
-   ["ご希望",state.preference],
-   ["気になる機能",state.features.join("・")||"指定なし"],
-   ["訪問希望",state.visit],
-   ["補足",state.details||"なし"],
-   ["写真",state.photo?"選択済み":"なし"]
-  ];
-  html=card("ご相談内容の確認",`
-   <p>ここまでの内容をまとめました。</p>
-   ${rows.map(([k,v])=>`
-    <div class="summaryLine">
-     <strong>${escapeHTML(k)}</strong>${escapeHTML(v)}
-    </div>`).join("")}
-   <div class="warning">
-    <strong>現在は公開前の動作確認版です。</strong><br>
-    送信機能はまだ有効ではありません。
-    ここで予約や受付は確定しません。
-   </div>
-   <button class="primary" id="restart">最初からやり直す</button>
-  `);
- }
-
- if(state.step>0&&state.step<7){
-  html+=`<button class="secondary" id="back">← 前の質問へ戻る</button>`;
- }
-
+ if(state.step===0)html+=card('どのようなご相談ですか？',options([['水が漏れる','💦'],['水が流れない','🚽'],['蛇口を交換したい','🚰'],['その他の水まわり','🛁']],'issue',1));
+ if(state.step===1)html+=card('どこの水まわりですか？',options([['キッチン','🍳'],['洗面台','🪥'],['トイレ','🚽'],['浴室','🛁'],['屋外・配管','🏠'],['分からない','❓']],'place',2));
+ if(state.step===2)html+=card('今、水はどのような状態ですか？',options([['大量に漏れている','⚠️'],['少し漏れている','💧'],['水が出ない・流れない','🚱'],['水漏れはない','✅'],['よく分からない','❓']],'water',3));
+ if(state.step===3)html+=card('設備は何年くらい使っていますか？',options([['5年未満','✨'],['5〜10年','🕒'],['10年以上','📅'],['分からない','❓']],'age',4));
+ if(state.step===4)html+=card('写真を見せていただけますか？',`<p>蛇口や水漏れしている場所の写真があると、状況を確認しやすくなります。</p><div class="photoButtons"><label class="photoButton" for="cameraInput"><span>📷</span>写真を撮る</label><label class="photoButton" for="fileInput"><span>🖼️</span>写真を選ぶ</label></div>${state.photoUrl?`<img id="preview" src="${state.photoUrl}" alt="選択した写真"><p class="note">写真を選択しました。</p>`:''}<p class="note">※写真は現在、この端末内での確認用です。今回の送信では写真はアップロードされません。AI画像判定もまだ行いません。</p><button class="primary" data-go="5">${state.photo?'この写真で次へ':'写真なしで次へ'}</button>`);
+ if(state.step===5)html+=card('どのような解決方法をご希望ですか？',options([['まず修理したい','🔧'],['新しいものに交換したい','🚰'],['修理と交換を比較したい','⚖️'],['相談して決めたい','💬']],'preference',6));
+ if(state.step===6){const replacement=!state.preference.includes('まず修理');html+=card('ご希望をもう少し教えてください',`${replacement?`<p>新しい蛇口をご検討の場合、次のような機能もあります。</p><div class="grid">${[['タッチレス','👋'],['浄水機能','💧'],['ホースが伸びる','🚿'],['節水タイプ','🌱']].map(([v,e])=>`<button type="button" class="choice feature" data-feature="${v}"><span class="emoji">${e}</span>${v}</button>`).join('')}</div><p class="note">気になる機能は複数選択できます。</p>`:''}<label for="details">その他、気になること（任意）</label><textarea id="details" maxlength="1000" placeholder="例：蛇口の根元から水が漏れます">${esc(state.details)}</textarea><label for="visit">訪問希望</label><select id="visit">${['まだ決めていない','できるだけ早く','1週間以内','日程は相談したい'].map(v=>`<option ${state.visit===v?'selected':''}>${v}</option>`).join('')}</select><button class="primary" id="confirm">相談内容を確認する</button>`)}
+ if(state.step===7){const rows=[['ご相談',state.issue],['場所',state.place],['水の状態',state.water],['使用年数',state.age],['ご希望',state.preference],['気になる機能',state.features.join('・')||'指定なし'],['訪問希望',state.visit],['補足',state.details||'なし'],['写真',state.photo?'選択済み（写真自体は送信されません）':'なし']];html=card(state.sent?'受付が完了しました':'ご相談内容の確認',`${state.sent?`<div class="success"><strong>ご相談を受け付けました。</strong><br>受付番号：${esc(state.caseId)}<br>訪問日時はスタッフ確認後にご案内します。<br>※この時点では訪問予約は確定していません。</div>`:'<p>内容をご確認ください。</p>'}${rows.map(([k,v])=>`<div class="summaryLine"><strong>${esc(k)}</strong>${esc(v)}</div>`).join('')}${state.sent?'<button class="primary" id="restart">新しい相談を始める</button>':`<p class="note">送信するには、下のセキュリティ確認を完了してください。</p><div class="verify" id="turnstile-box"></div><button class="primary" id="send" disabled>相談内容を送信する</button><div id="sendStatus" class="status" role="status" aria-live="polite"></div><p class="note">受付内容は保存されますが、予約はスタッフ確認後に確定します。現段階では写真やお客様の連絡先は送信されません。</p>`}`)}
+ if(state.step>0&&state.step<7)html+='<button class="secondary" id="back">← 前の質問へ戻る</button>';
+ if(state.step===7&&!state.sent)html+='<button class="secondary" id="back">← 内容を修正する</button>';
  app.innerHTML=html;
-
- document.querySelectorAll("[data-field]").forEach(b=>{
-  b.onclick=()=>{
-   state[b.dataset.field]=b.dataset.value;
-   state.step=Number(b.dataset.next);
-   render();
-  };
- });
-
- document.querySelectorAll("[data-go]").forEach(b=>{
-  b.onclick=()=>{state.step=Number(b.dataset.go);render()};
- });
-
- document.querySelectorAll(".feature").forEach(b=>{
-  const v=b.dataset.feature;
-  b.classList.toggle("selected",state.features.includes(v));
-  b.onclick=()=>{
-   state.features=state.features.includes(v)?
-    state.features.filter(x=>x!==v):
-    [...state.features,v];
-   b.classList.toggle("selected",state.features.includes(v));
-  };
- });
-
- const confirm=document.getElementById("confirm");
- if(confirm)confirm.onclick=()=>{
-  state.details=document.getElementById("details").value.trim();
-  state.visit=document.getElementById("visit").value;
-  state.step=7;
-  render();
- };
-
- const back=document.getElementById("back");
- if(back)back.onclick=()=>{state.step--;render()};
-
- const restart=document.getElementById("restart");
- if(restart)restart.onclick=()=>{
-  if(state.photoUrl)URL.revokeObjectURL(state.photoUrl);
-  Object.assign(state,{
-   step:0,issue:"",place:"",water:"",age:"",
-   preference:"",features:[],photo:null,photoUrl:null,
-   details:"",visit:"",name:"",phone:""
-  });
-  render();
- };
+ document.querySelectorAll('[data-field]').forEach(b=>b.onclick=()=>{state[b.dataset.field]=b.dataset.value;state.step=Number(b.dataset.next);render()});
+ document.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>{state.step=Number(b.dataset.go);render()});
+ document.querySelectorAll('.feature').forEach(b=>{const v=b.dataset.feature;b.classList.toggle('selected',state.features.includes(v));b.onclick=()=>{state.features=state.features.includes(v)?state.features.filter(x=>x!==v):[...state.features,v];b.classList.toggle('selected',state.features.includes(v))}});
+ const confirm=document.getElementById('confirm');if(confirm)confirm.onclick=()=>{state.details=document.getElementById('details').value.trim();state.visit=document.getElementById('visit').value;state.step=7;render()};
+ const back=document.getElementById('back');if(back)back.onclick=()=>{if(state.step===7)resetWidget();state.step--;render()};
+ const restart=document.getElementById('restart');if(restart)restart.onclick=()=>{resetWidget();if(state.photoUrl)URL.revokeObjectURL(state.photoUrl);Object.assign(state,{step:0,issue:'',place:'',water:'',age:'',preference:'',features:[],photo:null,photoUrl:null,details:'',visit:'まだ決めていない',sent:false,caseId:''});render()};
+ const send=document.getElementById('send');if(send)send.onclick=submit;
+ if(state.step===7&&!state.sent)initTurnstile();
 }
-
-function handlePhoto(event){
- const file=event.target.files?.[0];
- if(!file)return;
-
- if(!file.type.startsWith("image/")){
-  alert("画像ファイルを選んでください。");
-  return;
- }
- if(file.size>10*1024*1024){
-  alert("写真は10MB以下にしてください。");
-  return;
- }
- if(state.photoUrl)URL.revokeObjectURL(state.photoUrl);
- state.photo=file;
- state.photoUrl=URL.createObjectURL(file);
- render();
-}
-
-document.getElementById("cameraInput").addEventListener("change",handlePhoto);
-document.getElementById("fileInput").addEventListener("change",handlePhoto);
-
-render();
+async function submit(){if(submitting||!token)return;submitting=true;updateSubmit();const status=document.getElementById('sendStatus');status.className='status';status.textContent='送信しています…';try{const payload={turnstileToken:token,place:state.place,symptom:state.issue,safety:state.water,equipment_age:state.age,intent:state.preference,feature:state.features.join('・'),visit_preference:state.visit,memo:state.details};const res=await fetch(ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});const data=await res.json().catch(()=>({}));if(!res.ok||data.success!==true)throw Error(data.error||`送信に失敗しました（HTTP ${res.status}）`);state.sent=true;state.caseId=data.caseId||'';resetWidget();render()}catch(e){status.className='status error';status.textContent=e.message||'送信できませんでした。しばらくしてからお試しください。';token='';if(window.turnstile&&widgetId!==null)window.turnstile.reset(widgetId)}finally{submitting=false;updateSubmit()}}
+function handlePhoto(event){const file=event.target.files?.[0];if(!file)return;if(!file.type.startsWith('image/')){alert('画像ファイルを選んでください。');return}if(file.size>10*1024*1024){alert('写真は10MB以下にしてください。');return}if(state.photoUrl)URL.revokeObjectURL(state.photoUrl);state.photo=file;state.photoUrl=URL.createObjectURL(file);render()}
+document.getElementById('cameraInput').addEventListener('change',handlePhoto);document.getElementById('fileInput').addEventListener('change',handlePhoto);render();
 </script>
 </body>
 </html>
